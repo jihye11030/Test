@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!-- 
+	<bean id="cb" class="sample.CalcBeanImpl">
+		<constructor-arg>
+			<value type="int">5</value>
+		</constructor-arg>
+		
+		<property name="su1" >
+			<value type="int">14</value>
+		</property>
+		
+	</bean> 
+-->
+	<bean id="cb" class="sample.CalcBeanImpl" p:su1="14" c:su2="5"/>
+	<bean id="message" class="sample.MessageBeanImpl" c:name="윤아" p:greeting="안녕"/>
+	  <!-- c:name 의 name 은 매개변수 이름을 적는거임 -->
+	
+<!-- 	
+	<bean id="message" class="sample.MessageBeanImpl">
+		<constructor-arg>
+			 <value>윤아</value>
+		</constructor-arg>
+		<property name="greeting" value="안녕"/>
+		
+	</bean>
+ -->
+
+</beans>
